@@ -4,41 +4,72 @@
 		<meta charset="utf-8">
 		<title>Latihan 4</title>
 		<style>
+			body{
+				text-align: center;
+				font-family: Arial;
+			}
 			.header {
 				width: 784px;
 				height: 200px;
 				background-color: grey;
+				border: 2px solid;
 			}
 			.footer {
 				width: 784px;
 				height: 100px;
 				background-color: cyan;
+				border: 2px solid;
 			}
 			.content {
 				display: flex;
 				height: auto;
 			}
 			.max-content {
+				border-right: 2px solid;
 				height: 500px;
+				line-height: 500px;
 			}
 			#left {
+				border-left: 2px solid;
+				border-right: 2px solid;
 				width: 200px;
 				background-color: blue;
 			}
 			#right {
-				width: 584px;
+				font-weight: bold;
+				width: 582px;
 				background-color: silver;
+			}
+			.header>text-content {
+				line-height: 200px;
+				font-weight: bold;
+			}
+			.footer>text-content {
+				line-height: 100px;
+			}
+			.max-content>text-content {
+				line-height: 1.5;
+				display: inline-block;
+				vertical-align: middle;
 			}
 
 		</style>
 	</head>
 
 	<body>
-		<div class="header"></div>
-		<div class="content">
-			<div id="left" class="max-content"></div>
-			<div id="right" class="max-content"></div>
+		<div class="header">
+			<text-content>BAGIAN HEADER (WIDTH : 784PX, HEIGHT : 200PX)</text-content>
 		</div>
-		<div class="footer"></div>
+		<div class="content">
+			<div id="left" class="max-content">
+				<text-content>KOLOM 1<br>AUTO HEADER<br>WIDTH : 200PX</text-content>
+			</div>
+			<div id="right" class="max-content">
+				<text-content>KOLOM 2<br>AUTO HEADER<br>WIDTH : 584PX</text-content>
+			</div>
+		</div>
+		<div class="footer">
+			<text-content>BAGIAN FOOTER (WIDTH : 784PX, HEIGHT : 100PX)</text-content>
+		</div>
 	</body>
 </html>
